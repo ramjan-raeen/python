@@ -163,40 +163,5 @@ class CurrentAccount(Account):
 
 
 
-def account_summary(account):
-    """
-    Dispalce of summary of any type of account.
 
-    Demonstrates polymerphosim -- this function works for both `SavingAccount`
-    share the interface from `Account`.
-
-    Args:
-        account (Account): Any object derive from `Account` base class.
-    """
-    print(f"\nAccount Summary for {account.account_holder_name}'s :")
-    print(f"Current balance for {account.__class__.__name__}: ₹{account.get_balance()} \n")
-    account.deposite(10000)
-    account.withdraw(500)
-    print(f"Balance: ₹{account.get_balance()}")
-    print("-" * 50)
-
-if __name__ == "__main__":
-    """
-    Demonstration of all OOP concept:
-        - Abstraction (Account base class)
-        - Inheritance (SavingAccount)
-        - Encapsulation (_balance, __interest_rate)
-        - Polymorphism (account_summary funtion)
-
-    """
-    savings = SavingAccount("464600123", "Ramjan", 1000)
-    current = CurrentAccount("4646JBL00123", "Ramjan", 5000.0)
-
-    for acc in [savings, current]:
-        account_summary(acc)
-
-    savings.add_interest()
-    print(f"Final Saving Balance: ₹{savings.get_balance()}")
-    print(f"final Current balance: ₹{current.get_balance()}")
-    print("-"*50)
 
