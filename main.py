@@ -1,4 +1,4 @@
-from oops.oop import Account, SavingAccount, CurrentAccount
+from oops import Account, SavingAccount, CurrentAccount
 
 def account_summary(account):
     """
